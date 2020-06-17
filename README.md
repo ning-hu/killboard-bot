@@ -23,9 +23,10 @@ The person using commands must have the `admin` role in the Discord server.
 
 If the bot goes down, all usernames that were watched will need to be re-added.
 
-The bot makes an event api request every 30 seconds.
+The bot makes an event api request every 10 seconds.
 
 ## TODO
+* Make the tasks non-blocking
 * Add a way to remember the watch list and re-create the in-memory watch list from it
 * Add bulk adding/removing of people to watch
 * Add an "ignore nakeds" option (no equips and no items in inventory)

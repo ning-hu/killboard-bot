@@ -98,7 +98,7 @@ async def watching(ctx):
 # Actual Albion server logic YAY~~~
 
 # API Endpoints
-ALBION_EVENTS_URL = 'https://gameinfo.albiononline.com/api/gameinfo/events'
+ALBION_EVENTS_URL = 'https://gameinfo.albiononline.com/api/gameinfo/events?limit=51&offset=0'
 ALBION_IMAGE_URL = 'https://render.albiononline.com/v1/item/'
 ALBION_KB_URL = 'https://albiononline.com/en/killboard/battles/'
 IMAGES_PATH = 'assets/'
@@ -208,7 +208,7 @@ def pasteEquips(img, equips, loc, font, w, h):
             img.paste(resized, ((w-NEW_SIZE)//2 + loc[i][0], (h-NEW_SIZE)//2 + loc[i][1])) 
 
 # Execute this function 
-@tasks.loop(seconds=30.0)
+@tasks.loop(seconds=10.0)
 async def killboard():
     global eventId
     global isDown
@@ -324,15 +324,16 @@ async def killboard():
             print(f'{killer["Name"]}, {victim["Name"]}')
 
             # Locally stored images must be sent this way 
-            imgfile = discord.File(outFile, filename="image.png")
+            imgfile = discord.File(outFile, filename=outFile)
 
             # Make the embed
             embed = discord.Embed(title=f'{killer["Name"]} killed {victim["Name"]}', url=f'{ALBION_KB_URL}{event["EventId"]}', color=color)
             embed.add_field(name=f'{kAllyName}', value=f'{kGuildName}', inline=True)
             embed.add_field(name=f'{vAllyName}', value=f'{vGuildName}', inline=True)
             embed.set_footer(text=f'{eventDate} {eventTime} UTC')
-            embed.set_image(url='attachment://image.png')
+            embed.set_image(url=f'attachment://{outFile}')
 
+            print("Sending killboard image")
             channel = bot.get_channel(ch)
             await channel.send(file=imgfile, embed=embed)
             
