@@ -6,6 +6,7 @@ Discord bot for the Albion Online killboard information to be displayed in a Dis
 
 ## Environment Variables
 `DISCORD_TOKEN`: Discord authentication token
+
 `LOGGER_ID`: Id of the Discord channel designated as the logger
 
 ## Required Permissions
