@@ -20,7 +20,7 @@ Discord bot for the Albion Online killboard information to be displayed in a Dis
 `https://discord.com/api/oauth2/authorize?client_id=<your_client_id>&permissions=52224&scope=bot`
 
 ## Additional Information
-Image assets are automatically stored to `assets/` when first retrieved.
+Image assets are automatically stored to `assets/` when first retrieved. Sometimes, the images API is unresponsive, so this should speed things up when the same image is required in the future.
 
 The person using commands must have the `admin` role in the Discord server.
 
