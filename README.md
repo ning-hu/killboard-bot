@@ -1,6 +1,8 @@
 # killboard-bot
 Discord bot for the Albion Online killboard information to be displayed in a Discord channel
 
+![Example killboard embed](assets/killboard-example.png)
+
 ## Running the bot
 ```$ python3 bot.py```
 

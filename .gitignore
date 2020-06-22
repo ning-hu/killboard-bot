@@ -2,3 +2,4 @@
 .DS_Store
 assets/*
 !assets/template.png
+!assets/killboard-example.png
