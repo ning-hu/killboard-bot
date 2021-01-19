@@ -3,8 +3,12 @@ Discord bot for the Albion Online killboard information to be displayed in a Dis
 
 ![Example killboard embed](assets/killboard-example.png)
 
+## Requirements
+* Python 3.8
+* [discord.py](https://discordpy.readthedocs.io/en/latest/intro.html#installing)
+
 ## Running the bot
-```$ python3 bot.py```
+```$ python3.8 bot.py```
 
 ## Environment Variables
 `DISCORD_TOKEN`: Discord authentication token
