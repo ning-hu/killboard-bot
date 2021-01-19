@@ -15,6 +15,12 @@ Discord bot for the Albion Online killboard information to be displayed in a Dis
 
 `LOGGER_ID`: Id of the Discord channel designated as the logger
 
+## Channel Permissions
+* View Channel
+* Send Messages
+* Embed Links
+* Attach Files
+
 ## Required Permissions
 * Read Messages
 * Send Messages
