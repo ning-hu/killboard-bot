@@ -1,4 +1,4 @@
-# killboard-bot
+# killboard-bot (no longer updated)
 Discord bot for the Albion Online killboard information to be displayed in a Discord channel
 
 ![Example killboard embed](assets/killboard-example.png)
